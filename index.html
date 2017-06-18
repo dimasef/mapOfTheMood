@@ -1,0 +1,37 @@
+<html>
+   <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title>Пример Google Maps - Mapstraction API</title>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyAaV8pa2RhsPW7snW5YWIHERbPFE4OiJVE" type="text/javascript"></script> 
+    <script src="libs/mxn.js?(google)"></script>
+
+ 
+	<script type="text/javascript">
+    var mapstraction;
+	function initialize() {
+		mapstraction = new mxn.Mapstraction('map_canvas','google');
+		mapstraction.setCenterAndZoom(new mxn.LatLonPoint(50.431782, 30.516382), 11);
+	}
+  </script>
+ 
+   </head>
+   <body onload="initialize()">
+      <div id="map_canvas" style="width: 1200px; height: 700px;"></div>
+      <script src="jquery.min.js"></script>
+      <script>
+        $(function(){
+          $.ajax({
+            url: 'https://gist.github.com/howdyworld/97fff6abf89b9d3be02761fde69b4f26',
+            dataType: 'json',
+            type: 'get',
+            cache: false,
+            success: function(data){
+            $(data).each(function(index, value){
+              console.log(data);
+            });
+            }
+          });
+        });
+      </script>
+   </body>
+</html>

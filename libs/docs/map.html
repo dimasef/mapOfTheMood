@@ -1,0 +1,20 @@
+<html>
+   <head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title>Пример Google Maps - Mapstraction API</title>
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=AIzaSyCOZ7qOJgiflP7zQnMep9tmmn9CD4M9nbo" type="text/javascript"></script> 
+    <script type="text/javascript" src="mxn.js"></script>
+ 
+	<script type="text/javascript">
+    var mapstraction;
+	function initialize() {
+		mapstraction = new mxn.Mapstraction('map_canvas','google');
+		mapstraction.setCenterAndZoom(new mxn.LatLonPoint(56.323678, 44.0), 12);
+	}
+    </script>
+ 
+   </head>
+   <body onload="initialize()">
+      <div id="map_canvas" style="width: 800px; height: 600px;"></div>
+   </body>
+</html>
