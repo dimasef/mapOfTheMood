@@ -1,0 +1,17 @@
+{"points": [
+    {
+      "lat": 50.450099,
+      "lon": 30.523912,
+      "mood": 0.54,
+      "url": "https://twitter.com...",
+      "source": "twitter"
+    },
+    {
+      "lat": 50.450099,
+      "lon": 30.523912,
+      "mood": -0.2,
+      "url": "https://vk.com...",
+      "source": "vk"
+    }
+  ]
+}

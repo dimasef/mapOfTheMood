@@ -11,6 +11,16 @@
 	function initialize() {
 		mapstraction = new mxn.Mapstraction('map_canvas','google');
 		mapstraction.setCenterAndZoom(new mxn.LatLonPoint(50.431782, 30.516382), 11);
+    var myPoint = new mxn.LatLonPoint(50.450099, 30.523912);   
+ 
+          my_marker = new mxn.Marker(myPoint);
+          my_marker.setIcon('red.png', [15, 15]);
+           
+          var text = "mood: -0.2";
+           
+          my_marker.setInfoBubble(text);
+           
+          mapstraction.addMarker(my_marker);
 	}
   </script>
  
@@ -21,13 +31,13 @@
       <script>
         $(function(){
           $.ajax({
-            url: 'https://gist.github.com/howdyworld/97fff6abf89b9d3be02761fde69b4f26',
+            url: 'api.json',
             dataType: 'json',
             type: 'get',
             cache: false,
             success: function(data){
             $(data).each(function(index, value){
-              console.log(data);
+              console.log(value.points);
             });
             }
           });
